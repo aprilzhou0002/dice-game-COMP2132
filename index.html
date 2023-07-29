@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta charset="UTF-8">
+    <title>Dice Game</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon/dice.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img id="burger1" src="images/burger-1.png" alt="Burger Image">
+        <h1>Who Wins for The Burger?</h1>
+        <img id="burger2" src="images/burger-1.png" alt="Burger Image">
+    </header>
+    <div id="main-wrapper">
+    <main>
+        <section class="scoreboard">
+            <div id="playerScoreboard">
+                <div class="profile-container">
+                    <img id="playerProfile" src="images/Waddle_Dee.png" alt="Player Profile">
+                    <h2>You</h2>
+                </div>
+                <div id="diceBox">
+                    <p id="playerDice">Dice: </p>
+                    <img id="playerDice1" src="images/dice-1.png" alt="Player Dice 1">
+                    <img id="playerDice2" src="images/dice-2.png" alt="Player Dice 2">
+                </div>
+                <p id="playerRoundScore">Round Score: </p>
+                <p id="playerTotalScore">Total Score: </p>
+            </div>
+            <div id="computerScoreboard">
+                <div class="profile-container">
+                    <img id="computerProfile" src="images/Kirby.png" alt="Computer Profile">
+                    <h2>Kirby</h2>
+                </div>
+                <div id="diceBox">
+                    <p id="computerDice">Dice: </p>
+                    <img id="computerDice1" src="images/dice-1.png" alt="Computer Dice 1">
+                    <img id="computerDice2" src="images/dice-2.png" alt="Computer Dice 2">
+                </div>
+                <p id="computerRoundScore">Round Score: </p>
+                <p id="computerTotalScore">Total Score: </p>
+            </div>
+        </section>
+        <div class="button-container">
+            <button id="rollBtn">Roll Dice</button>
+            <button id="resetBtn">Reset Game</button>
+        </div>
+        
+        <h2>How to Play <i id="arrow" class="fas fa-chevron-down" style="cursor:pointer;"></i></h2>
+        <div id="instructions" style="display: none;">
+            <ul>
+                <li>You're Waddle Dee competing against Kirby for a burger!</li>
+                <li>Click "Roll Dice" for 3 rounds of dice rolls. The highest total wins the burger.</li>
+                <li>If a dice shows 1, round score resets to 0. If both dice match, the score doubles. Otherwise, the score is the sum of dice values.</li>
+                <li>In case of a tie, another round is played. Click "New Game" to restart.</li>
+            </ul>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="winner"></h2>
+                <img id="burgerImage" style="display:none;">
+                <img id="burgerMakingImage" style="display:none;">
+                <div class="img-container"><img id="drawImage" src="images/draw_image.png" style="display: none;"></div>
+            </div>
+        </div>
+    </main>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Copyright &copy; 2023 - COMP 2132</p>
+        </div>
+    </footer>
+</body>
+</html>
