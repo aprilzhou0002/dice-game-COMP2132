@@ -21,4 +21,3 @@ This is the main JavaScript file for the game. It includes logic for rolling the
 Clone this repository.
 Open the index.html file in your browser to start the game.
 Enjoy the game!
-You can save this content into a file named README.md at the root level of your project. This file uses Markdown syntax, which is widely used for README files and can be rendered nicely in various places such as GitHub.
